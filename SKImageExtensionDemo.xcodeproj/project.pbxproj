@@ -12,9 +12,13 @@
 		AD18B8972205EE070088F290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18B8952205EE070088F290 /* Main.storyboard */; };
 		AD18B8992205EE080088F290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD18B8982205EE080088F290 /* Assets.xcassets */; };
 		AD18B89C2205EE080088F290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18B89A2205EE080088F290 /* LaunchScreen.storyboard */; };
+		DD5D84769BC2251A7D6ACE70 /* Pods_SKImageExtensionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6EFB47B61AF6EA11AC05692 /* Pods_SKImageExtensionDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C193209D4189423D15DAA4B /* Pods-SKImageExtensionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageExtensionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageExtensionDemo/Pods-SKImageExtensionDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		24529C105B05AF6A17392C3F /* Pods-SKImageExtensionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageExtensionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageExtensionDemo/Pods-SKImageExtensionDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A6EFB47B61AF6EA11AC05692 /* Pods_SKImageExtensionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKImageExtensionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD18B88E2205EE070088F290 /* SKImageExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKImageExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD18B8912205EE070088F290 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD18B8932205EE070088F290 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD5D84769BC2251A7D6ACE70 /* Pods_SKImageExtensionDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B3AF54A72893346D6C8CA2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6EFB47B61AF6EA11AC05692 /* Pods_SKImageExtensionDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD18B8852205EE070088F290 = {
 			isa = PBXGroup;
 			children = (
 				AD18B8902205EE070088F290 /* SKImageExtensionDemo */,
 				AD18B88F2205EE070088F290 /* Products */,
+				EC2F31C88EEAD06F85D126B4 /* Pods */,
+				9B3AF54A72893346D6C8CA2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = SKImageExtensionDemo;
 			sourceTree = "<group>";
 		};
+		EC2F31C88EEAD06F85D126B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C193209D4189423D15DAA4B /* Pods-SKImageExtensionDemo.debug.xcconfig */,
+				24529C105B05AF6A17392C3F /* Pods-SKImageExtensionDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD18B8A02205EE080088F290 /* Build configuration list for PBXNativeTarget "SKImageExtensionDemo" */;
 			buildPhases = (
+				10ED342C3A0159C6BD7E6132 /* [CP] Check Pods Manifest.lock */,
 				AD18B88A2205EE070088F290 /* Sources */,
 				AD18B88B2205EE070088F290 /* Frameworks */,
 				AD18B88C2205EE070088F290 /* Resources */,
+				AD18B8A32205EE580088F290 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10ED342C3A0159C6BD7E6132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKImageExtensionDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD18B8A32205EE580088F290 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD18B88A2205EE070088F290 /* Sources */ = {
@@ -280,6 +344,7 @@
 		};
 		AD18B8A12205EE080088F290 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C193209D4189423D15DAA4B /* Pods-SKImageExtensionDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +362,7 @@
 		};
 		AD18B8A22205EE080088F290 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24529C105B05AF6A17392C3F /* Pods-SKImageExtensionDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
