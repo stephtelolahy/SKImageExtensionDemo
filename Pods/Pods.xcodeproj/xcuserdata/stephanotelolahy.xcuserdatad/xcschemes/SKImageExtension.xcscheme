@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "241E82916A0A36EA2FF16BBFDE123A42"
+               BlueprintIdentifier = "9256C6F3C4C10D25E13831815F25BBF4"
                BlueprintName = "SKImageExtension"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "SKImageExtension.framework">

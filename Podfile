@@ -8,6 +8,6 @@ target 'SKImageExtensionDemo' do
 
   # Pods for SKImageExtensionDemo
   pod 'SwiftLint'
-  pod 'SKImageExtension', :git => 'https://github.com/stephtelolahy/SKImageExtension.git'
+  pod 'SKImageExtension', :git => 'https://github.com/stephtelolahy/SKImageExtension.git', :tag => '1.0.0'
 
 end
